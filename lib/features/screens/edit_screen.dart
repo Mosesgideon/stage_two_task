@@ -30,6 +30,26 @@ class _EditScreenState extends State<EditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor:Colors.white,
+        elevation: 1,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_rounded,
+            size: 15,
+            color: Colors.black,
+          ),
+        ),
+        shadowColor: Colors.black,
+        title: const Text(
+          'Edit CV Screen',
+          style: TextStyle(
+              fontSize: 15, fontWeight: FontWeight.w500, color: Colors.black),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -37,15 +57,12 @@ class _EditScreenState extends State<EditScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 40,
-              ),
               const Text(
-                'Edit CV Screen',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                'Full name:',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
               ),
               const SizedBox(
-                height: 40,
+                height: 5,
               ),
               OutlinedFormField(
                 hint: 'Full name',
@@ -54,12 +71,26 @@ class _EditScreenState extends State<EditScreen> {
               const SizedBox(
                 height: 20,
               ),
+              const Text(
+                'Slack username:',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
               OutlinedFormField(
                 hint: 'Slack name',
                 controller: slackusernameController,
               ),
               const SizedBox(
                 height: 20,
+              ),
+              const Text(
+                'Github Handle:',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+              ),
+              const SizedBox(
+                height: 5,
               ),
               OutlinedFormField(
                 hint: 'github handle',
@@ -68,8 +99,15 @@ class _EditScreenState extends State<EditScreen> {
               const SizedBox(
                 height: 20,
               ),
+              const Text(
+                'A brief personal bio:',
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
               TextFormField(
-                maxLines: 10,
+                maxLines: 9,
                 textInputAction: TextInputAction.newline,
                 controller: personalbioController,
                 style: const TextStyle(color: Colors.black),

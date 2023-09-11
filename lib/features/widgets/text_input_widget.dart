@@ -46,7 +46,7 @@ class _OutlinedFormFieldState extends State<OutlinedFormField> {
         keyboardType: widget.inputType,
         onFieldSubmitted: widget.onFieldSubmitted,
         obscureText: widget.obscure == null ? false : widget.obscure!,
-        style:  TextStyle(color: Colors.black),
+        style:  const TextStyle(color: Colors.black),
         decoration: InputDecoration(
             filled: true,
             border: OutlineInputBorder(
