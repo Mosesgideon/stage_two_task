@@ -47,11 +47,6 @@ class _HomeScreenState extends State<HomeScreen> {
                  Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // const SizedBox(height: 40,),
-                    // const Text(
-                    //   'HNGx CV ',
-                    //   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16,color: Colors.black),
-                    // ),
                     const SizedBox(
                       height: 10,
                     ),

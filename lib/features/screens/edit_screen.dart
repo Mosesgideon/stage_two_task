@@ -108,7 +108,7 @@ class _EditScreenState extends State<EditScreen> {
               ),
               TextFormField(
                 maxLines: 9,
-                textInputAction: TextInputAction.newline,
+                textInputAction: TextInputAction.done,
                 controller: personalbioController,
                 style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -148,7 +148,6 @@ class _EditScreenState extends State<EditScreen> {
     githubhandleController.text = widget.myCv.githubhandle;
     personalbioController.text = widget.myCv.bio;
 
-    setState(() {});
   }
 
   void updateCv() {
