@@ -69,7 +69,7 @@ class _EditScreenState extends State<EditScreen> {
                 height: 20,
               ),
               TextFormField(
-                maxLines: 8,
+                maxLines: 10,
                 textInputAction: TextInputAction.newline,
                 controller: personalbioController,
                 style: const TextStyle(color: Colors.black),
@@ -79,7 +79,7 @@ class _EditScreenState extends State<EditScreen> {
                         gapPadding: 2,
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10)),
-                    fillColor: Colors.grey.withOpacity(0.2),
+                    fillColor: Colors.grey.withOpacity(0.1),
                     hintText: 'brief bio',
                     prefixIconColor: Colors.grey,
                     contentPadding: const EdgeInsets.symmetric(
